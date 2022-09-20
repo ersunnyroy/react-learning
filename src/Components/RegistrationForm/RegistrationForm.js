@@ -8,14 +8,14 @@ const RegistrationForm  = () => {
 
     const getCandidates = () =>{
         let candidates =  localStorage.getItem("candidates");
-        if(candidates.length>0)
+        if(candidates)
         {
            return JSON.parse(candidates);
         }
        //  console.log(candidates);
         return [];
      }
-     
+
     const [candidates, setCandidate]            = useState(getCandidates()); 
     const [vFirstName, setFirstName]            = useState('');
     const [vLastName, setLastName]              = useState('');
