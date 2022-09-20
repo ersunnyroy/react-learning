@@ -12,12 +12,13 @@ const Navigation = () => {
   return (
     <Navbar fixed="top" bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">  <img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
-
+        <LinkContainer to="/">
+            <Navbar.Brand><img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="/">
+            <LinkContainer to="/" >
                 <Nav.Link>New Registration</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/candidates-list">
