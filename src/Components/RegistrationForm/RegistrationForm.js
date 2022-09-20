@@ -6,7 +6,17 @@ import {useState, useEffect} from 'react';
 
 const RegistrationForm  = () => {
 
-    const [candidates, setCandidate]            = useState([]); 
+    const getCandidates = () =>{
+        let candidates =  localStorage.getItem("candidates");
+        if(candidates.length>0)
+        {
+           return JSON.parse(candidates);
+        }
+       //  console.log(candidates);
+        return [];
+     }
+     
+    const [candidates, setCandidate]            = useState(getCandidates()); 
     const [vFirstName, setFirstName]            = useState('');
     const [vLastName, setLastName]              = useState('');
     const [eGender, setGender]                  = useState('');
@@ -17,6 +27,8 @@ const RegistrationForm  = () => {
     const [tAddress, setAddress]                = useState('');
     const [eTechnology, setTechnology]          = useState('');
     
+    
+
     const resetFormFields = () => {
         setFirstName('');
         setLastName('');
