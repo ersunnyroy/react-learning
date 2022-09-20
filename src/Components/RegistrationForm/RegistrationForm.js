@@ -55,6 +55,7 @@ const RegistrationForm  = () => {
         return(
             <>
                 <div className='container-fluid'>
+                    <div className="marginNavigation">
                     <h3 className="heading text-center font-italic mt-2 mb-5">Walk-in Interview Registration</h3>
                     <div className="row">
                     <div className='col-6 mx-auto mb-5'>
@@ -94,7 +95,7 @@ const RegistrationForm  = () => {
                                     <Form.Control as="textarea" name="tAddress" value={tAddress} onChange={event => setAddress(event.target.value)} rows={3} />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>Known Technologies</Form.Label>
+                                    <Form.Label>Experienced/Knowledge of Technologies</Form.Label>
                                     <Form.Check type="checkbox" onChange={event => setTechnology(event.target.value)} checked={eTechnology === 'php'}  value="php" id="PHP" label="PHP" />
                                     <Form.Check type="checkbox" value="node js"  onChange={event => setTechnology(event.target.value)} checked={eTechnology === 'node js'} id="Node JS" label="Node JS" />
                                     <Form.Check type="checkbox" value="react js"  onChange={event => setTechnology(event.target.value)} checked={eTechnology === 'react js'} id="React JS" label="React JS" />
@@ -105,6 +106,7 @@ const RegistrationForm  = () => {
                                     Submit
                                 </Button>
                             </Form>
+                    </div>
                     </div>
                     </div>
                 </div>
